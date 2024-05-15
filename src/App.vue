@@ -17,7 +17,7 @@ import Header from "@/components/Header.vue";
 import Social from "@/components/Social.vue";
 import About from "@/components/About.vue";
 import Project from "@/components/Project.vue";
-import Service from "@/components/Servcice.vue";
+import Service from "@/components/Service.vue";
 // import Skills from "@/components/Skills.vue";
 
 import Lenis from "lenis";
