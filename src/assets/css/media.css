@@ -1,0 +1,264 @@
+@media screen and (max-width: 1150px) {
+    .about__left {
+        width: 250px;
+    }
+
+    .info {
+        height: 100%;
+        padding: 25px 25px 65px 25px;
+        width: 100%;
+    }
+
+    .info__card {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .info__detail {
+        display: block;
+        width: 100%;
+    }
+
+    .info__left {
+        column-gap: 5px;
+    }
+
+    .info__left > img {
+        width: 35px;
+    }
+
+    .info__left > p {
+        font-size: 28px;
+    }
+
+    .date__media {
+        display: none;
+    }
+
+    .info__date {
+        text-align: start;
+        margin-top: -15px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    .about__left {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .about__left {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 815px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav__list {
+        position: fixed;
+        left: -100%;
+        top: 67.5px;
+        align-items: start;
+        flex-direction: column;
+        height: 100vh;
+        width: 70%;
+        background: #ffffff;
+        padding: 50px 30px;
+        transition: left 0.3s;
+        z-index: 100;
+    }
+
+    .active {
+        left: 0;
+        display: flex;
+    }
+
+    .social {
+        flex-direction: row;
+        left: 0;
+        width: 100%;
+        padding: 10px 20px;
+        justify-content: space-between;
+        border-radius: 0;
+        top: unset;
+        bottom: 0;
+    }
+
+    .tooltip .tooltiptext {
+        top: -50px;
+        left: -30px;
+        width: 95px;
+    }
+
+    .overlay {
+        top: 68.5px;
+    }
+
+    .header__content {
+        flex-direction: column;
+        align-items: start;
+        margin-left: 5px;
+    }
+
+    .header__right > img {
+        display: none;
+    }
+
+    .about {
+        height: auto;
+    }
+
+    .about__content {
+        flex-direction: column;
+    }
+
+    .about__left {
+        width: 250px;
+    }
+
+    .about__right {
+        gap: 20px;
+        text-align: center;
+        width: 90%;
+    }
+
+    .about__content {
+        gap: 30px;
+    }
+
+    .swiper {
+        width: 355px;
+        padding: 20px;
+    }
+
+    .project {
+        padding-bottom: 85px;
+
+
+    }
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .header__title {
+        font-size: 68px;
+        line-height: 62px;
+    }
+
+    .header__btn {
+        font-size: 13px;
+        width: 170px;
+        height: 51px;
+    }
+
+    .tooltip .tooltiptext {
+        font-size: 14px;
+        width: 85px;
+    }
+
+    .project__btn {
+        bottom: 15px;
+
+    }
+    
+    
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .header__left {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .header__title {
+        font-size: 50px;
+        line-height: 52px;
+    }
+
+    .header__btn {
+        font-size: 13px;
+        width: 170px;
+        height: 51px;
+    }
+
+    .section__title {
+        font-size: 44px;
+        margin-bottom: 50px;
+    }
+
+    .project__card {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .section__title {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+
+    .about__text {
+        font-size: 16px;
+
+    }
+
+    .info__name {
+        font-size: 22px;
+
+    }
+
+    .info__left > p {
+        font-size: 25px;
+
+    }
+
+    .info__sub {
+        font-size: 18px;
+
+    }
+
+    .info__desc {
+        font-size: 15px;
+
+    }
+
+    .swiper {
+        width: 290px;
+        padding: 0 0 20px 0;
+
+    }
+
+    .project__img {
+        width: 100%;
+
+    }
+
+    .project__btn {
+        width: 100%;
+
+    }
+
+    .header__title {
+        font-size: 45px;
+        line-height: 42px;
+
+    }
+
+    .tooltiptext {
+        display: none;
+
+    }
+    .tooltiptext {
+        display: none;
+
+    }
+
+}

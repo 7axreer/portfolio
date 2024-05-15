@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url(../font/Open_Sans/OpenSans-Light.ttf);
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url(../font/Open_Sans/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'OpenSans-Medium';
+    src: url(../font/Open_Sans/OpenSans-Medium.ttf);
+}
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url(../font/Open_Sans/OpenSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url(../font/Open_Sans/OpenSans-Bold.ttf);
+}
+
+/* ================= Reddit Mono ================= */
+
+@font-face {
+    font-family: 'RedditMono-Light';
+    src: url(../font/Reddit_Mono/RedditMono-Light.ttf);
+}
+@font-face {
+    font-family: 'RedditMono-Regular';
+    src: url(../font/Reddit_Mono/RedditMono-Regular.ttf);
+}
+@font-face {
+    font-family: 'RedditMono-Medium';
+    src: url(../font/Reddit_Mono/RedditMono-Medium.ttf);
+}
+@font-face {
+    font-family: 'RedditMono-SemiBold';
+    src: url(../font/Reddit_Mono/RedditMono-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'RedditMono-Bold';
+    src: url(../font/Reddit_Mono/RedditMono-Bold.ttf);
+}
+
+/* ================= SYNE ================= */
+
+@font-face {
+    font-family: 'Syne-Regular';
+    src: url(../font/Syne/Syne-Regular.ttf);
+}
+@font-face {
+    font-family: 'Syne-Medium';
+    src: url(../font/Syne/Syne-Medium.ttf);
+}
+@font-face {
+    font-family: 'Syne-SemiBold';
+    src: url(../font/Syne/Syne-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Syne-Bold';
+    src: url(../font/Syne/Syne-Bold.ttf);
+}
