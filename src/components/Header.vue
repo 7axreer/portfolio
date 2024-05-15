@@ -6,22 +6,22 @@
 
                 <ul class="nav__list" :class="{ active: isActive }">
                     <li>
-                        <a href="#about" class="nav__link">About</a>
+                        <a href="#about" class="nav__link" :class="active = !isActive">About</a>
                     </li>
                     <li>
-                        <a href="#project" class="nav__link">Projects</a>
+                        <a href="#project" class="nav__link" @click="showNav">Projects</a>
                     </li>
                     <li>
-                        <a href="#service" class="nav__link">Services</a>
+                        <a href="#service" class="nav__link" @click="showNav">Services</a>
                     </li>
                     <li>
-                        <a href="" class="nav__link">Skills</a>
+                        <a href="" class="nav__link" @click="showNav">Skills</a>
                     </li>
                     <li>
-                        <a href="" class="nav__link">Testimonials</a>
+                        <a href="" class="nav__link" @click="showNav">Testimonials</a>
                     </li>
                     <li>
-                        <a href="" class="nav__link">Contact</a>
+                        <a href="" class="nav__link" @click="showNav">Contact</a>
                     </li>
 
                     <div class="nav__lang">
@@ -65,12 +65,6 @@
 
 <script>
 export default {
-    props: {
-        navScroll: {
-            type: Function,
-            required: true,
-        },
-    },
 
     data() {
         return {

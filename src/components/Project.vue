@@ -6,15 +6,15 @@
 
                 <Swiper
                     class="project__cards swiper"
-                    :slides-per-view="1"
                     :space-between="30"
-                    @swiper="onSwiper"
-                    @slideChange="onSlideChange"
+                    :navigation="true"
+                    :modules="modules"
+                    centeredSlides
                     :grab-cursor="true"
                     :loop="true"
                     :breakpoints="{
                         815: {
-                            slidesPerView: 2,
+                            slidesPerView: 2.5,
                         },
                     }">
                     <SwiperSlide class="project__card swiper-slide">
@@ -105,9 +105,10 @@
                         <a href="" class="project__btn"> See Project <i class="far fa-external-link"></i> </a>
                     </SwiperSlide>
                 </Swiper>
+
                 <div class="project__swipe">
                     <p>Swipe to see other projects</p>
-                    <img src="@/assets/img/swipe.png" alt="">
+                    <img src="@/assets/img/swipe.png" alt="" />
                 </div>
             </div>
         </div>
@@ -116,22 +117,18 @@
 
 <script>
     import { Swiper, SwiperSlide } from "swiper/vue";
+    import { Navigation } from "swiper/modules";
+    import "swiper/css/navigation";
     import "swiper/css";
+
     export default {
         components: {
             Swiper,
             SwiperSlide,
         },
         setup() {
-            const onSwiper = (swiper) => {
-                console.log(swiper);
-            };
-            const onSlideChange = () => {
-                console.log("slide change");
-            };
             return {
-                onSwiper,
-                onSlideChange,
+                modules: [Navigation],
             };
         },
     };
@@ -139,7 +136,28 @@
 
 <style>
     .swiper {
-        width: 700px;
+        width: 865px;
         padding: 20px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: #000000;
+        background: rgba(255, 255, 255, 0.41);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border-radius: 5px;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 20px;
+        font-weight: bold;
     }
 </style>

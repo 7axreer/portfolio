@@ -47,6 +47,19 @@
     }
 }
 
+@media screen and (max-width: 950px) {
+    .service__cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .third__card {
+        grid-column: span 2;
+
+    }
+}
+
 @media screen and (max-width: 900px) {
     .about__left {
         width: 150px;
@@ -137,11 +150,7 @@
 
     .project {
         padding-bottom: 85px;
-
-
     }
-
-
 }
 
 @media screen and (max-width: 700px) {
@@ -163,12 +172,17 @@
 
     .project__btn {
         bottom: 15px;
+    }
+
+    .service__cards {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .third__card {
+        grid-column: unset;
 
     }
-    
-    
-
-
 }
 
 @media screen and (max-width: 480px) {
@@ -207,58 +221,46 @@
 
     .about__text {
         font-size: 16px;
-
     }
 
     .info__name {
         font-size: 22px;
-
     }
 
     .info__left > p {
         font-size: 25px;
-
     }
 
     .info__sub {
         font-size: 18px;
-
     }
 
     .info__desc {
         font-size: 15px;
-
     }
 
     .swiper {
         width: 290px;
         padding: 0 0 20px 0;
-
     }
 
     .project__img {
         width: 100%;
-
     }
 
     .project__btn {
         width: 100%;
-
     }
 
     .header__title {
         font-size: 45px;
         line-height: 42px;
-
     }
 
     .tooltiptext {
         display: none;
-
     }
     .tooltiptext {
         display: none;
-
     }
-
 }

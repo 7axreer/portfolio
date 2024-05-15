@@ -26,7 +26,7 @@
                             interactive user interfaces that enhance user experience and engagement.
                         </p>
                     </div>
-                    <div class="service__card">
+                    <div class="service__card third__card">
                         <div class="service__name">
                             <i class="far fa-cogs"></i>
                             <h2>Website Optimization</h2>
@@ -48,6 +48,12 @@ export default {};
 </script>
 
 <style>
+
+.service {
+    margin: 50px 0 85px 0;
+
+}
+
 .service__name {
     display: flex;
     align-items: center;
