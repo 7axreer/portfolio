@@ -7,6 +7,10 @@
                 <Swiper
                     class="project__cards swiper"
                     :space-between="30"
+                    :autoplay="{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }"
                     :navigation="true"
                     :modules="modules"
                     centeredSlides
@@ -117,7 +121,7 @@
 
 <script>
     import { Swiper, SwiperSlide } from "swiper/vue";
-    import { Navigation } from "swiper/modules";
+    import { Navigation, Autoplay } from "swiper/modules";
     import "swiper/css/navigation";
     import "swiper/css";
 
@@ -128,7 +132,7 @@
         },
         setup() {
             return {
-                modules: [Navigation],
+                modules: [Navigation, Autoplay],
             };
         },
     };
@@ -138,6 +142,7 @@
     .swiper {
         width: 865px;
         padding: 20px;
+        position: relative;
     }
 
     .swiper-button-prev,
@@ -153,6 +158,7 @@
         height: 40px;
         display: grid;
         place-items: center;
+        position: absolute;
     }
 
     .swiper-button-prev::after,

@@ -356,7 +356,6 @@ header {
 
 .project__swipe > img {
     filter: brightness(0) saturate(100%) invert(34%) sepia(8%) saturate(0%) hue-rotate(180deg) brightness(93%) contrast(90%);
-
 }
 
 /* ! PROJECT END */
@@ -398,3 +397,72 @@ header {
     bottom: 0;
     transition: 0.3s;
 }
+
+/* ! SKILLS START */
+
+.skills {
+    margin: 50px 0 85px 0;
+}
+
+.skills__wrap {
+    background: #eeeeef;
+    border-radius: 16px;
+    height: 50vh;
+    /* #fe6057 */
+    /* #fdbd2e */
+    /* #25c93f */
+}
+
+.skills__top {
+    border-radius: 16px 16px 0 0;
+    background: #f1f1f3;
+    border-bottom: 1px solid #c8c8c9;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+}
+
+.skills__color {
+    width: 20px;
+    height: 20px;
+    background: #fe6057;
+    border-radius: 50px;
+}
+
+.skills__yellow {
+    background: #fdbd2e;
+}
+
+.skills__green {
+    background: #25c93f;
+}
+
+.skills__window {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+
+}
+
+.skills__skill {
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--second-color);
+    width: 100px;
+    height: 120px;
+    border-radius: 8px;
+
+}
+
+.skills__img {
+    width: 40px;
+}
+
+.skills__name {
+    font-family: var(--syneMedium);
+    font-size: 18px;
+}
+
+/* ! SKILLS END */

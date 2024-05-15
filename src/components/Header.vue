@@ -15,7 +15,7 @@
                         <a href="#service" class="nav__link" @click="showNav">Services</a>
                     </li>
                     <li>
-                        <a href="" class="nav__link" @click="showNav">Skills</a>
+                        <a href="#skills" class="nav__link" @click="showNav">Skills</a>
                     </li>
                     <li>
                         <a href="" class="nav__link" @click="showNav">Testimonials</a>

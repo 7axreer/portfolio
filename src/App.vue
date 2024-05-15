@@ -4,7 +4,7 @@
     <About ref="scrollToElementRef" />
     <Project ref="scrollToProjectRef" />
     <Service />
-    <!-- <Skills /> -->
+    <Skills />
 </template>
 
 
@@ -18,7 +18,7 @@ import Social from "@/components/Social.vue";
 import About from "@/components/About.vue";
 import Project from "@/components/Project.vue";
 import Service from "@/components/Service.vue";
-// import Skills from "@/components/Skills.vue";
+import Skills from "@/components/Skills.vue";
 
 import Lenis from "lenis";
 
@@ -41,7 +41,7 @@ export default {
         About,
         Project,
         Service,
-        // Skills,
+        Skills,
     },
     data() {
         return {};
