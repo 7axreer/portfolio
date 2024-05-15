@@ -1,17 +1,16 @@
 <template>
-    <Header :navScroll="scrollToElement" />
+    <Header />
     <Social />
-    <About ref="scrollToElementRef" />
-    <Project ref="scrollToProjectRef" />
+    <About />
+    <Project />
     <Service />
     <Skills />
 </template>
 
 
 <script>
-import SmoothScroll from "smooth-scroll";
 
-const scroll = new SmoothScroll();
+// const scroll = new SmoothScroll();
 
 import Header from "@/components/Header.vue";
 import Social from "@/components/Social.vue";
@@ -20,7 +19,7 @@ import Project from "@/components/Project.vue";
 import Service from "@/components/Service.vue";
 import Skills from "@/components/Skills.vue";
 
-import Lenis from "lenis";
+// import Lenis from "lenis";
 
 // const lenis = new Lenis({
 //     duration: 3,
