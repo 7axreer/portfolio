@@ -6,7 +6,7 @@
 
                 <ul class="nav__list" :class="{ active: isActive }">
                     <li>
-                        <a href="#about" class="nav__link" :class="active = !isActive">About</a>
+                        <a href="#about" class="nav__link" @click="showNav">About</a>
                     </li>
                     <li>
                         <a href="#project" class="nav__link" @click="showNav">Projects</a>
@@ -25,7 +25,7 @@
                     </li>
 
                     <div class="nav__lang">
-                        <button class="lang">Uz</button>
+                        <button class="lang" @click="lang = !lang">{{ lang ? "Uz" : "En" }}</button>
                     </div>
                 </ul>
 
@@ -69,6 +69,7 @@ export default {
     data() {
         return {
             isActive: false,
+            lang: true,
         };
     },
 
@@ -126,6 +127,17 @@ nav {
 
 .lang {
     font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+
+}
+
+.lang:hover {
+    background: var(--second-color);    
+    color: var(--white-color);
+    
+
 }
 
 
