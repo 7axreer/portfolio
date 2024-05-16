@@ -209,6 +209,8 @@ header {
     gap: 60px;
 }
 
+
+
 .info__date {
     color: rgb(117, 119, 128);
     font-family: var(--syneRegular);
@@ -620,4 +622,8 @@ header {
     border-radius: 8px;
 }
 
+.contact__media {
+    display: none;
+
+}
 /* ! CONTACT END */
