@@ -19,8 +19,45 @@ const skills = [
     },
     {
         id: 4,
-        name: "BEM",
-        img: require("@/assets/img/bem.svg"),
+        name: "TypeScript",
+        img: require("@/assets/img/typescript.png"),
+        des: 'Expert',
+    },
+    {
+        id: 6,
+        name: 'VUE JS',
+        img: require("@/assets/img/vue.png"),
+        des: "Expert"
+    },
+    {
+        id: 5,
+        name: "VUE X",
+        img: require("@/assets/img/vuex.png"),
+        des: 'Expert',
+    },
+    {
+        id: 7,
+        name: "GITHUB",
+        img: require("@/assets/img/github.svg"),
+        des: 'Expert',
+    },
+    
+    {
+        id: 8,
+        name: "GIT",
+        img: require("@/assets/img/git.svg"),
+        des: 'Expert',
+    },
+    {
+        id: 9,
+        name: "PHOTOSHOP",
+        img: require("@/assets/img/psd.svg"),
+        des: 'Expert',
+    },
+    {
+        id: 10,
+        name: "FIGMA",
+        img: require("@/assets/img/figma.svg"),
         des: 'Expert',
     },
     
