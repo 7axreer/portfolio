@@ -5,9 +5,9 @@
                 <h1 class="section__title service__title">Skills</h1>
                 <div class="skills__wrap">
                     <div class="skills__top">
-                        <div class="skills__color skills__red"></div>
-                        <div class="skills__color skills__yellow"></div>
-                        <div class="skills__color skills__green"></div>
+                        <div class="skills__color skills__red"><i class="far fa-times"></i></div>
+                        <div class="skills__color skills__yellow"><i class="far fa-horizontal-rule"></i></div>
+                        <div class="skills__color skills__green"><i class="far fa-expand-alt"></i></div>
                     </div>
 
                     <div class="skills__window">

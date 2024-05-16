@@ -5,6 +5,7 @@
     <Project />
     <Service />
     <Skills />
+    <Contact />
 </template>
 
 
@@ -18,6 +19,7 @@ import About from "@/components/About.vue";
 import Project from "@/components/Project.vue";
 import Service from "@/components/Service.vue";
 import Skills from "@/components/Skills.vue";
+import Contact from "@/components/Contact.vue";
 
 // import Lenis from "lenis";
 
@@ -41,6 +43,7 @@ export default {
         Project,
         Service,
         Skills,
+        Contact,
     },
     data() {
         return {};

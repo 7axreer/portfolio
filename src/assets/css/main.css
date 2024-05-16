@@ -427,6 +427,21 @@ header {
     height: 20px;
     background: #fe6057;
     border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.skills__color i {
+    font-size: 10px;
+    color: var(--text-color);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.skills__color:hover i {
+    opacity: 1;
 }
 
 .skills__yellow {
@@ -448,7 +463,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .skills_title {
@@ -458,13 +472,11 @@ header {
     align-items: center;
     justify-content: center;
     gap: 4px;
-
 }
 
-.skills_title>i {
+.skills_title > i {
     font-size: 16px;
     color: var(--first-color);
-
 }
 
 .skills__box {
@@ -509,20 +521,103 @@ header {
 }
 
 @keyframes slide-in {
-	0% {
-		transform: translateY(-20%);
-	}
+    0% {
+        transform: translateY(-20%);
+    }
     35% {
         transform: translateY(0);
-
     }
-	70% {
-		transform: translateY(-20%);
-	}
-	100% {
-		transform: translateY(0);
-	}
-    
+    70% {
+        transform: translateY(-20%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* ! SKILLS END */
+
+/* ! CONTACT START */
+.contact {
+    background: var(--second-color);
+    width: 100%;
+    padding: 200px 0;
+}
+
+.contact__text {
+    font-family: var(--syneBold);
+    color: var(--white-color);
+    font-size: 48px;
+}
+
+.contact__text >span {
+    color: var(--first-color);
+    font-family: var(--syneBold);
+    font-size: 48px;
+
+}
+
+.contact__sub {
+    font-family: var(--syneSemiBold);
+    color: var(--white-color);
+    font-size: 18px;
+    width: 450px;
+}
+
+.contact__box {
+    background: #263039;
+    padding: 80px;
+    border-radius: 1.5rem;
+    position: relative;
+}
+
+.contact__form {
+    position: absolute;
+    top: -40%;
+    right: 50px;
+    width: 430px;
+    height: 480px;
+    padding: 35px;
+    border-radius: 1.5rem;
+    background: rgba(23, 34, 43, 0.69);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.8px);
+    -webkit-backdrop-filter: blur(9.8px);
+    border: 1px solid rgba(255, 255, 255, 0.267);
+}
+
+.contact__form > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__label {
+    color: #e1e5e1;
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+.contact__input {
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.267);
+    outline: none;
+    border-radius: 8px;
+    color: var(--white-color);
+    font-size: 18px;
+    margin: 0 0 20px;
+}
+
+.contact__input::placeholder {
+    color: rgba(255, 255, 255, 0.534);
+    font-size: 16px;
+}
+
+.input__button {
+    color: var(--white-color);
+    background: var(--first-color);
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* ! CONTACT END */

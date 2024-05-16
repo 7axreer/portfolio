@@ -18,9 +18,6 @@
                         <a href="#skills" class="nav__link" @click="showNav">Skills</a>
                     </li>
                     <li>
-                        <a href="" class="nav__link" @click="showNav">Testimonials</a>
-                    </li>
-                    <li>
                         <a href="" class="nav__link" @click="showNav">Contact</a>
                     </li>
 
