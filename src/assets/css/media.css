@@ -264,3 +264,30 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 410px) {
+    .skills__img {
+        width: 30px;
+
+    }
+
+    .skills__skill {
+        width: 110px;
+        height: 140px;
+
+    }
+
+    .skills__name {
+        font-size: 15px;
+
+    }
+
+    .skills__des {
+        font-size: 13px;
+    }
+
+    .skills__window {
+        padding: 20px 15px 50px 15px;
+
+    }
+}

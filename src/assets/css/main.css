@@ -490,7 +490,7 @@ header {
 .skills__img {
     width: 40px;
     transform: rotateY(0deg);
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .skills__name {
@@ -504,6 +504,25 @@ header {
 }
 
 .skills__skill:hover .skills__img {
-    transform: translateY(-7px);
+    animation-name: slide-in;
+    animation-duration: 0.3s;
 }
+
+@keyframes slide-in {
+	0% {
+		transform: translateY(-20%);
+	}
+    35% {
+        transform: translateY(0);
+
+    }
+	70% {
+		transform: translateY(-20%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+    
+}
+
 /* ! SKILLS END */
