@@ -70,6 +70,15 @@
         display: flex;
     }
 
+    .date__pc {
+        display: block;
+        margin-top: 2px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+    }
+
     .nav__list {
         position: fixed;
         left: -100%;
@@ -300,6 +309,12 @@
         font-size: 30px;
 
     }
+
+    .input__user {
+        padding-left: 40px;
+    
+    }
+    
 }
 
 @media screen and (max-width: 400px) {

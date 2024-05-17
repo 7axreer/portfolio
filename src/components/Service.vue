@@ -22,8 +22,9 @@
                         </div>
 
                         <p class="service__des">
-                            With expertise in front-end technologies like <span>Vue.JS</span>, <span>React</span>, and <span>Bootstrap</span>, I build
-                            interactive user interfaces that enhance user experience and engagement.
+                            I ensure that websites look and function flawlessly on any device. Using technologies like <span>CSS Flexbox</span>,
+                            <span>Grid</span>, and <span>media queries</span>, I create adaptive layouts that enhance user experience and engagement
+                            across all screen sizes.
                         </p>
                     </div>
                     <div class="service__card third__card">
@@ -33,8 +34,9 @@
                         </div>
 
                         <p class="service__des">
-                            With expertise in front-end technologies like <span>Vue.JS</span>, <span>React</span>, and <span>Bootstrap</span>, I build
-                            interactive user interfaces that enhance user experience and engagement.
+                            I specialize in optimizing websites for speed and user experience. Using techniques like code and image optimization,
+                            caching, and server-side improvements, I ensure fast loading times and smooth browsing, leading to improved rankings and
+                            happier visitors.
                         </p>
                     </div>
                 </div>
@@ -44,56 +46,54 @@
 </template>
 
 <script>
-export default {};
+    export default {};
 </script>
 
 <style>
+    .service {
+        margin: 50px 0 85px 0;
+    }
 
-.service {
-    margin: 50px 0 85px 0;
+    .service__name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        font-family: var(--syneMedium);
+    }
 
-}
+    .service__name > h2 {
+        font-family: var(--syneMedium);
+        font-size: 18px;
+    }
+    .service__name > i {
+        color: var(--first-color);
+        font-size: 36px;
+    }
 
-.service__name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    font-family: var(--syneMedium);
-}
+    .service__card {
+        border: 1px solid var(--second-color);
+        border-radius: 20px;
+        padding: 20px;
+        display: grid;
+        place-self: center;
+        height: 250px;
+    }
 
-.service__name > h2 {
-    font-family: var(--syneMedium);
-    font-size: 18px;
-}
-.service__name > i {
-    color: var(--first-color);
-    font-size: 36px;
-}
+    .service__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
 
-.service__card {
-    border: 1px solid var(--second-color);
-    border-radius: 20px;
-    padding: 20px;
-    display: grid;
-    place-self: center;
-    height: 250px;
-}
+    .service__des {
+        text-align: center;
+        margin-top: 10px;
+    }
 
-.service__cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.service__des {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.service__des > span {
-    color: var(--first-color);
-    text-decoration: underline;
-}
+    .service__des > span {
+        color: var(--first-color);
+        text-decoration: underline;
+    }
 </style>

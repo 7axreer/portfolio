@@ -4,13 +4,14 @@
             <div class="skills__content">
                 <h1 class="section__title service__title">Skills</h1>
                 <div class="skills__wrap">
+                    
                     <div class="skills__top">
-                        <div class="skills__color skills__red"><i class="far fa-times"></i></div>
-                        <div class="skills__color skills__yellow"><i class="far fa-horizontal-rule"></i></div>
-                        <div class="skills__color skills__green"><i class="far fa-expand-alt"></i></div>
+                        <div class="skills__color skills__red" @click="none"><i class="far fa-times"></i></div>
+                        <div class="skills__color skills__yellow" @click="addActive"><i class="far fa-horizontal-rule"></i></div>
+                        <div class="skills__color skills__green" @click="removeActive"><i class="far fa-expand-alt"></i></div>
                     </div>
 
-                    <div class="skills__window">
+                    <div class="skills__window" :class="touch ? 'showSkills' : ''">
                         <div class="skills__card">
                             <h2 class="skills_title"><i class="far fa-code"></i> Main Tools</h2>
                             <div class="skills__box">
@@ -32,6 +33,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -45,6 +47,7 @@
         data() {
             return {
                 skills: skills,
+                touch: false,
             };
         },
         computed: {
@@ -55,7 +58,25 @@
                 return this.skills.filter((skill) => [5, 8, 9, 10].includes(skill.id));
             },
         },
+
+        methods: {
+            addActive() {
+                this.touch = true;
+            },
+            removeActive() {
+                this.touch = false;
+            },
+        },
     };
 </script>
 
-<style></style>
+<style>
+    .showSkills {
+        height: 0;
+        overflow: hidden;
+    }
+
+    .none {
+        height: 100%;
+    }
+</style>

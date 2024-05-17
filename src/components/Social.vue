@@ -74,7 +74,7 @@
     }
 
     .tooltip .tooltiptext {
-        opacity: 0;
+        display: none;
         width: 120px;
         background-color: #091621;
         color: #fff;
@@ -88,6 +88,6 @@
     }
 
     .tooltip:hover .tooltiptext {
-        opacity: 1;
+        display: block;
     }
 </style>
