@@ -45,7 +45,7 @@
                 <div class="header__left">
                     <h1 class="header__title">
                         <span>{{ langData.im[lang ? "en" : "ru"] }}</span> <br />
-                        {{ langData.fullStack[lang ? "en" : "ru"] }}<br />
+                        Full-Stack<br />
                         {{ langData.frontEnd[lang ? "en" : "ru"] }} <br />
                         {{ langData.developer[lang ? "en" : "ru"] }}.
                     </h1>
@@ -60,97 +60,100 @@
 </template>
 
 <script>
-    import langData from "@/lang.js";
-    export default {
-        data() {
-            return {
-                isActive: false,
-                lang: true,
-                langData: langData,
-            };
-        },
+import langData from "@/lang.js";
+export default {
+    data() {
+        return {
+            isActive: false,
+            lang: true,
+            langData: langData,
+        };
+    },
 
-        methods: {
-            showNav() {
-                this.isActive = !this.isActive;
-            },
-            toggleLanguage() {
-                this.lang = !this.lang;
-            },
+    methods: {
+        showNav() {
+            this.isActive = !this.isActive;
         },
-    };
+        toggleLanguage() {
+            this.lang = !this.lang;
+            this.$emit("toggle-language");
+        },
+        // emitToggleLanguage() {
+        // },
+    },
+};
 </script>
 
 <style>
-    .hamburger {
-        font-size: 21px;
-        display: none;
-    }
+.hamburger {
+    font-size: 21px;
+    display: none;
+}
 
-    nav {
-        padding: 20px 0;
-        width: 100%;
-        position: fixed;
-        z-index: 100;
-        box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.02);
-        background: var(--white-color);
+nav {
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.02);
+    background: var(--white-color);
 
-        background: rgba(255, 255, 255, 0.719);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-    }
+    background: rgba(255, 255, 255, 0.719);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
 
-    .nav__content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+.nav__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-    .nav__logo {
-        font-size: 21px;
-        font-family: var(--openSemiBold);
-        color: var(--second-color);
-    }
+.nav__logo {
+    font-size: 21px;
+    font-family: var(--openSemiBold);
+    color: var(--second-color);
+}
 
-    .nav__list {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        padding: 5px 0;
-    }
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 5px 0;
+}
 
-    .nav__link {
-        color: var(--second-color);
-        font-size: 18px;
-    }
+.nav__link {
+    color: var(--second-color);
+    font-size: 18px;
+}
 
-    .lang {
-        width: 62px;
-        font-size: 16px;
-        padding: 5px;
-        border-radius: 5px;
-        transition: 0.3s;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 5px;
-    }
+.lang {
+    width: 62px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
 
-    .lang > img {
-        width: 25px;
-    }
+.lang > img {
+    width: 25px;
+}
 
-    .lang:hover {
-        background: var(--second-color);
-        color: var(--white-color);
-    }
+.lang:hover {
+    background: var(--second-color);
+    color: var(--white-color);
+}
 
-    .lang__select {
-        border: none;
-        outline: none;
-        font-family: var(--openSemiBold);
-        font-size: 16px;
-        background: none;
-    }
+.lang__select {
+    border: none;
+    outline: none;
+    font-family: var(--openSemiBold);
+    font-size: 16px;
+    background: none;
+}
 </style>

@@ -38,13 +38,8 @@ const langData = {
 
     },
     im: {
-        en: "I'm",
-        ru: "Я"
-    },
-    fullStack: {
-        en: "Full Stack",
-        ru: "Фул Стек"
-
+        en: "Hi, I'm",
+        ru: "Привет, я"
     },
     frontEnd: {
         en: "Front-End",
@@ -56,20 +51,28 @@ const langData = {
         ru: "Разработчик"
 
     },
-    en: {
-        aboutMe: "About Me",
-        education: "Education",
-        workExperience: "Work Experience",
-        im: "I'm"
-        // Other English text keys and values
-      },
-      ru: {
-        aboutMe: "Обо мне",
-        education: "Образование",
-        workExperience: "Опыт работы",
-        im: "Я"
-        // Other Russian text keys and values
-      },
+    aboutMe: {
+        en: 'About',
+        ru: 'Обо'
+    },
+    aboutMeMe: {
+        en: 'Me',
+        ru: 'Мне'
+    },
+    aboutMeTextFirst: {
+        en: "Hi, my name is Saidaxror, I was born in Andijan Region in 2005. Nowadays, I'm front-end developer",
+        ru: 'Привет, меня зовут Саидахрор, я родился в Андижанской области в 2005 году. Сейчас я фронтенд-разработчик.'
+    },
+    aboutMeTextSecond: {
+        en: "Mainly, I'm working as a freelancer in UPWORK platform and handed over lots of successful projects to satisfied clients",
+        ru: 'В основном я работаю фрилансером на платформе UPWORK и передал множество успешных проектов довольным клиентам.'
+    },
+    aboutMeTextThird: {
+        en: `With a focus on creating responsive, user-friendly websites and web applications, I bring creativity and technical expertise
+        to every project. Let's collaborate to bring your vision to life!"`,
+        ru: 'Сосредотачиваясь на создании адаптивных, удобных для пользователя веб-сайтов и веб-приложений, я привношу творческий подход и технический опыт в каждый проект. Давайте сотрудничать, чтобы воплотить ваше видение в жизнь!»'
+    },
+    
 };
 
 export default langData;

@@ -1,16 +1,14 @@
 <template>
-    <Header />
+    <Header @toggle-language="toggleLanguage" />
     <Social />
-    <About />
+    <About :lang="lang" />
     <Project />
     <Service />
     <Skills />
     <Contact />
 </template>
 
-
 <script>
-
 // const scroll = new SmoothScroll();
 
 import Header from "@/components/Header.vue";
@@ -46,7 +44,14 @@ export default {
         Contact,
     },
     data() {
-        return {};
+        return {
+            lang: true, // true for English, false for Russian
+        };
+    },
+    methods: {
+        toggleLanguage() {
+            this.lang = !this.lang;
+        },
     },
     // methods: {
     //     scrollToElement(e) {

@@ -10,16 +10,17 @@
                 </div>
 
                 <div class="about__right">
-                    <h2 class="about__title">About <span>Me</span></h2>
+                    <h2 class="about__title">
+                        {{ langData.aboutMe[lang ? "en" : "ru"] }} <span>{{ langData.aboutMeMe[lang ? "en" : "ru"] }}</span>
+                    </h2>
                     <p class="about__text">
-                        Hi, my name is <span>Saidaxror</span>, I was born in Andijan Region in 2005. Nowadays, I'm front-end developer
+                        {{ langData.aboutMeTextFirst[lang ? "en" : "ru"] }}
                         <br />
                         <br />
-                        Mainly, I'm working as a freelancer in UPWORK platform and handed over lots of successful projects to satisfied clients
+                        {{ langData.aboutMeTextSecond[lang ? "en" : "ru"] }}
                         <br />
                         <br />
-                        With a focus on creating responsive, user-friendly websites and web applications, I bring creativity and technical expertise
-                        to every project. Let's collaborate to bring your vision to life!"
+                        {{ langData.aboutMeTextThird[lang ? "en" : "ru"] }}
                     </p>
                 </div>
             </div>
@@ -115,12 +116,26 @@
 </template>
 
 <script>
-    export default {};
+import langData from "@/lang.js";
+
+export default {
+    props: {
+        lang: {
+            type: Boolean,
+            required: true,
+        },
+    },
+    data() {
+        return {
+            langData: langData,
+        };
+    },
+};
 </script>
 
 <style>
-    .scroll-container {
-        overflow-y: scroll;
-        scroll-behavior: smooth;
-    }
+.scroll-container {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
 </style>
