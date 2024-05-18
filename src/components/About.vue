@@ -33,18 +33,17 @@
                 <div class="info__card">
                     <div class="info__left">
                         <img src="@/assets/img/books.svg" alt="" />
-                        <p>Education</p>
+                        <p> {{ langData.education[lang ? "en" : "ru"] }}</p>
                     </div>
 
                     <div class="info__right">
                         <div class="info__detail">
                             <span class="info__date date__media">2023 - <i class="fal fa-hourglass-half"></i></span>
                             <div class="info__texts">
-                                <p class="info__name">Institute of Economics and Service, Samarkand</p>
-                                <p class="info__sub">Bachelor of Science, Marketing</p>
+                                <p class="info__name"> {{ langData.institute[lang ? "en" : "ru"] }}</p>
+                                <p class="info__sub">{{ langData.instituteFac[lang ? "en" : "ru"] }}</p>
                                 <p class="info__desc">
-                                    I am a student at Institute of Economics and Service, one of the best institutes in Uzbekistan. In this institute
-                                    I am studying Marketing faculty.
+                                    {{ langData.instituteDes[lang ? "en" : "ru"] }}
                                 </p>
                                 <span class="info__date date__pc">2023 - <i class="fal fa-hourglass-half"></i></span>
                             </div>
@@ -53,11 +52,10 @@
                         <div class="info__detail">
                             <span class="info__date date__media">2021 - 2023</span>
                             <div class="info__texts">
-                                <p class="info__name">Boston Specialized College</p>
-                                <p class="info__sub">Computer Science and Computer Engineering</p>
+                                <p class="info__name">  {{ langData.collage[lang ? "en" : "ru"] }}</p>
+                                <p class="info__sub">  {{ langData.collageFac[lang ? "en" : "ru"] }}</p>
                                 <p class="info__desc">
-                                    I acquired all the knowledge in Computer Science and Computer Engineering at the Specialized College in the Boston
-                                    district of Andijan region.
+                                     {{ langData.collageDes[lang ? "en" : "ru"] }}
                                 </p>
                                 <span class="info__date date__pc">2023 - current</span>
                             </div>
@@ -68,17 +66,17 @@
                 <div class="info__card">
                     <div class="info__left">
                         <img src="@/assets/img/bag.svg" alt="" />
-                        <p>Work Experience</p>
+                        <p>{{ langData.work[lang ? "en" : "ru"] }}</p>
                     </div>
 
                     <div class="info__right">
                         <div class="info__detail">
                             <span class="info__date date__media">2023 - <i class="fal fa-hourglass-half"></i></span>
                             <div class="info__texts">
-                                <p class="info__name">Upwork</p>
-                                <p class="info__sub">Front-End Developer</p>
+                                <p class="info__name">  {{ langData.upwork[lang ? "en" : "ru"] }}</p>
+                                <p class="info__sub">{{ langData.upworkInfo[lang ? "en" : "ru"] }}</p>
                                 <p class="info__desc">
-                                    Today I work as a freelancer on the UPWORK platform. I have worked and am working on many projects untill now.
+                                   {{ langData.upworkDes[lang ? "en" : "ru"] }}
                                 </p>
                                 <span class="info__date date__pc">2023 - <i class="fal fa-hourglass-half"></i></span>
                             </div>
@@ -87,10 +85,10 @@
                         <div class="info__detail">
                             <span class="info__date date__media">2020 to 2022</span>
                             <div class="info__texts">
-                                <p class="info__name">ASR Innovation C</p>
-                                <p class="info__sub">Graphic Designer</p>
+                                <p class="info__name">{{ langData.asr[lang ? "en" : "ru"] }}</p>
+                                <p class="info__sub">{{ langData.asrInfo[lang ? "en" : "ru"] }}</p>
                                 <p class="info__desc">
-                                    I worked as a graphic designer at Asr Innovation Learning Center. I have made many SMD posts.
+                                    {{ langData.asrDes[lang ? "en" : "ru"] }}
                                 </p>
                                 <span class="info__date date__pc">2020 to 2022</span>
                             </div>

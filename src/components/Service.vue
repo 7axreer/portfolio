@@ -2,41 +2,36 @@
     <section class="service" id="service">
         <div class="container">
             <div class="service__content">
-                <h1 class="section__title service__title">Our Servies</h1>
+                <h1 class="section__title service__title">{{ langData.serviceSec[lang ? "en" : "ru"] }}</h1>
                 <div class="service__cards">
                     <div class="service__card">
                         <div class="service__name">
                             <i class="fas fa-code"></i>
-                            <h2>Front-End Development</h2>
+                            <h2>{{ langData.serviceName[lang ? "en" : "ru"] }}</h2>
                         </div>
 
-                        <p class="service__des">
-                            With expertise in front-end technologies like <span>Vue.JS</span>, <span>React</span>, and <span>Bootstrap</span>, I build
-                            interactive user interfaces that enhance user experience and engagement.
+                        <p class="service__des" v-html="serviceText">
+                            
                         </p>
                     </div>
                     <div class="service__card">
                         <div class="service__name">
                             <i class="far fa-phone-laptop"></i>
-                            <h2>Responsive Design</h2>
+                            <h2>{{ langData.serviceNameRes[lang ? "en" : "ru"] }}</h2>
                         </div>
 
-                        <p class="service__des">
-                            I ensure that websites look and function flawlessly on any device. Using technologies like <span>CSS Flexbox</span>,
-                            <span>Grid</span>, and <span>media queries</span>, I create adaptive layouts that enhance user experience and engagement
-                            across all screen sizes.
+                        <p class="service__des" v-html="serviceTextRes">
+
                         </p>
                     </div>
                     <div class="service__card third__card">
                         <div class="service__name">
                             <i class="far fa-cogs"></i>
-                            <h2>Website Optimization</h2>
+                            <h2>{{ langData.serviceNameWeb[lang ? "en" : "ru"] }}</h2>
                         </div>
 
                         <p class="service__des">
-                            I specialize in optimizing websites for speed and user experience. Using techniques like code and image optimization,
-                            caching, and server-side improvements, I ensure fast loading times and smooth browsing, leading to improved rankings and
-                            happier visitors.
+                          {{ langData.serviceTextWeb[lang ? "en" : "ru"] }}
                         </p>
                     </div>
                 </div>
@@ -46,7 +41,28 @@
 </template>
 
 <script>
-    export default {};
+    import langData from "@/lang.js";
+    export default {
+        props: {
+            lang: {
+                type: Boolean,
+                required: true,
+            },
+        },
+        data() {
+            return {
+                langData: langData,
+            };
+        },
+        computed: {
+            serviceText() {
+                return this.lang ? this.langData.serviceText.en : this.langData.serviceText.ru;
+            },
+            serviceTextRes() {
+                return this.lang ? this.langData.serviceTextRes.en : this.langData.serviceTextRes.ru;
+            }
+        },
+    };
 </script>
 
 <style>
@@ -78,7 +94,7 @@
         padding: 20px;
         display: grid;
         place-self: center;
-        height: 250px;
+        height: 290px;
     }
 
     .service__cards {

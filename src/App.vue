@@ -2,8 +2,8 @@
     <Header @toggle-language="toggleLanguage" />
     <Social />
     <About :lang="lang" />
-    <Project />
-    <Service />
+    <Project :lang="lang"/>
+    <Service :lang="lang"/>
     <Skills />
     <Contact />
 </template>

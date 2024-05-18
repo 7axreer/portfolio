@@ -2,7 +2,7 @@
     <section class="project" id="project">
         <div class="container wrap">
             <div class="project__content">
-                <h2 class="section__title">My Projects</h2>
+                <h2 class="section__title">{{ langData.projectSec[lang ? "en" : "ru"] }}</h2>
 
                 <Swiper
                     class="project__cards swiper"
@@ -21,111 +21,38 @@
                             slidesPerView: 2.5,
                         },
                     }">
-                    <SwiperSlide class="project__card swiper-slide">
-                        <div class="project__img">
-                            <img src="@/assets/img/robot.svg" alt="" />
-                        </div>
-                        <div class="project__info">
-                            <span class="project__des">Website</span>
-                            <p class="project__name">robo.uz</p>
-                        </div>
-                        <a href="" class="project__btn"> See Project <i class="far fa-external-link"></i> </a>
-                    </SwiperSlide>
 
-                    <SwiperSlide class="project__card swiper-slide">
+                    <SwiperSlide class="project__card swiper-slide" v-for="project in projects" :key="project">
                         <div class="project__img">
-                            <img src="@/assets/img/huawei.png" alt="" />
+                            <img :src="project.img" alt="" />
                         </div>
                         <div class="project__info">
-                            <span class="project__des">Website</span>
-                            <p class="project__name">heawei.com</p>
+                            <span class="project__des">{{ lang ? project.des.en : project.des.ru}}</span>
+                            <p class="project__name">{{ project.name }}</p>
                         </div>
-                        <a href="" class="project__btn"> See Project <i class="far fa-external-link"></i> </a>
+                        <a href="" class="project__btn"> {{ langData.projectBtn[lang ? "en" : "ru"] }} <i class="far fa-external-link"></i> </a>
                     </SwiperSlide>
-
-                    <SwiperSlide class="project__card swiper-slide">
-                        <div class="project__img">
-                            <img src="@/assets/img/dji.svg" alt="" />
-                        </div>
-                        <div class="project__info">
-                            <span class="project__des">Website</span>
-                            <p class="project__name">dji.com</p>
-                        </div>
-                        <a href="" class="project__btn"> See Project <i class="far fa-external-link"></i> </a>
-                    </SwiperSlide>
-
-                    <SwiperSlide class="project__card swiper-slide">
-                        <div class="project__img">
-                            <img src="@/assets/img/mcdonalds.svg" alt="" />
-                        </div>
-                        <div class="project__info">
-                            <span class="project__des">Website</span>
-                            <p class="project__name">mcdonalds.com</p>
-                        </div>
-                        <a href="" class="project__btn"> See Project <i class="far fa-external-link"></i> </a>
-                    </SwiperSlide>
-
-                    <SwiperSlide class="project__card swiper-slide">
-                        <div class="project__img">
-                            <img src="@/assets/img/burger-king.svg" alt="" />
-                        </div>
-                        <div class="project__info">
-                            <span class="project__des">Website</span>
-                            <p class="project__name">burgerking.com</p>
-                        </div>
-                        <a href="" class="project__btn"> See Project <i class="far fa-external-link"></i> </a>
-                    </SwiperSlide>
-
-                    <SwiperSlide class="project__card swiper-slide">
-                        <div class="project__img">
-                            <img src="@/assets/img/toyota.svg" alt="" />
-                        </div>
-                        <div class="project__info">
-                            <span class="project__des">Website</span>
-                            <p class="project__name">toyota.com</p>
-                        </div>
-                        <a href="" class="project__btn"> See Project <i class="far fa-external-link"></i> </a>
-                    </SwiperSlide>
-
-                    <SwiperSlide class="project__card swiper-slide">
-                        <div class="project__img">
-                            <img src="@/assets/img/adobe.jpg" alt="" />
-                        </div>
-                        <div class="project__info">
-                            <span class="project__des">Website</span>
-                            <p class="project__name">adobe.com</p>
-                        </div>
-                        <a href="" class="project__btn"> See Project <i class="far fa-external-link"></i> </a>
-                    </SwiperSlide>
-
-                    <SwiperSlide class="project__card swiper-slide">
-                        <div class="project__img">
-                            <img src="@/assets/img/disney.jpg" alt="" />
-                        </div>
-                        <div class="project__info">
-                            <span class="project__des">Website</span>
-                            <p class="project__name">disney.com</p>
-                        </div>
-                        <a href="" class="project__btn"> See Project <i class="far fa-external-link"></i> </a>
-                    </SwiperSlide>
+                    
                 </Swiper>
-
-                <div class="project__swipe">
-                    <p>Swipe to see other projects</p>
-                    <img src="@/assets/img/swipe.png" alt="" />
-                </div>
             </div>
         </div>
     </section>
 </template>
 
 <script>
+    import skills from "@/data";
+    import langData from "@/lang.js";
     import { Swiper, SwiperSlide } from "swiper/vue";
     import { Navigation, Autoplay } from "swiper/modules";
     import "swiper/css/navigation";
     import "swiper/css";
-
     export default {
+        props: {
+            lang: {
+                type: Boolean,
+                required: true,
+            },
+        },
         components: {
             Swiper,
             SwiperSlide,
@@ -135,6 +62,18 @@
                 modules: [Navigation, Autoplay],
             };
         },
+        data() {
+            return {
+                skills: skills,
+                langData: langData,
+            };
+        },
+        computed: {
+            projects() {
+                return this.skills.filter((skill) => [11, 12, 13, 14, 16, 17].includes(skill.id));
+            },
+
+        }
     };
 </script>
 
