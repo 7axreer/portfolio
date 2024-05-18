@@ -4,8 +4,8 @@
     <About :lang="lang" />
     <Project :lang="lang"/>
     <Service :lang="lang"/>
-    <Skills />
-    <Contact />
+    <Skills :lang="lang"/>
+    <Contact :lang="lang"/>
 </template>
 
 <script>

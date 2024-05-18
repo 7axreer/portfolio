@@ -169,7 +169,45 @@ const langData = {
     serviceTextWeb: {
         en: `I specialize in optimizing websites for speed and user experience. Using techniques like code and image optimization, caching, and server-side improvements.`,
         ru: `Я специализируюсь на оптимизации веб-сайтов для обеспечения скорости и удобства использования. Использование таких методов, как оптимизация кода и изображений, кэширование и улучшения на стороне сервера.`
-    } 
+    },
+    skillsSec: {
+        en: `Skills`,
+        ru: `Навыки`
+
+    },
+    skillsTitle: {
+        en: `Main Tools`,
+        ru: `Основные Инструменты`
+
+    },
+    skillsTitleSecond: {
+        en: `Other Tools`,
+        ru: `Другие инструменты`
+
+    },
+    contactMe: {
+        en: `CONTACT <span>ME*</span>`,
+        ru: `СВЯЗАТЬСЯ С <span>МНОЙ*</span>`
+
+    },
+    contactDes: {
+        en: `Please enter your information correctly and we will contact you <span>as soon as possible</span> :)`,
+        ru: `Пожалуйста, введите свои данные правильно, и мы свяжемся с вами <span>как можно скорее</span> :)`
+
+    },
+    contactName: {
+        en: `Name`,
+        ru: `Имя`
+    },
+    contactNumber: {
+        en: `Phone number`,
+        ru: `Номер телефона`
+    },
+    contactUsername: {
+        en: `Telegram username`,
+        ru: `Имя пользователя Telegram`
+    },
+
 };
 
 export default langData;

@@ -550,7 +550,7 @@ header {
 .contact {
     background: var(--second-color);
     width: 100%;
-    padding: 150px 0;
+    padding: 150px 0 75px 0;
 }
 
 .contact__text {
@@ -684,5 +684,36 @@ header {
     margin-top: 190px;
 
 }
+
+.contact__details{
+    margin-top: 50px;
+
+}
+
+.contact__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 30px;
+
+}
+
+.contact__link {
+    color: var(--white-color);
+    font-size: 18px;
+}
+
+.contact__nums {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.contact__nums > li {
+    color: var(--white-color);
+}
+
+
 
 /* ! CONTACT END */

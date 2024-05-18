@@ -70,6 +70,11 @@
         display: flex;
     }
 
+    header {
+        height: 93vh;
+
+    }
+
     .date__pc {
         display: block;
         margin-top: 2px;
@@ -102,7 +107,7 @@
         flex-direction: row;
         left: 0;
         width: 100%;
-        padding: 10px 20px;
+        padding: 15px 20px;
         justify-content: space-between;
         border-radius: 0;
         top: unset;
@@ -161,8 +166,9 @@
     }
 
     .contact {
-        padding-top: 100px;
-        height: 100vh;
+        padding-top: 50px;
+        padding: 50px 0 75px 0;
+        /* height: 100vh; */
     }
 
     .contact__content {
@@ -201,6 +207,35 @@
         display: block;
         width: 95%;
     }
+    .line {
+        margin-top: 50px;
+    
+    }
+    .contact__details {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        width: 95%;
+        gap: 30px;
+
+    }
+    .contact__list {
+        flex-direction: unset;
+        width: 100%;
+        justify-content: space-around;
+        background: var(--first-color);
+        padding: 15px 0;
+        border-radius: 10px;
+
+    }
+
+    .contact__nums > *{
+        font-size: 22px;
+
+    }
+
+
 }
 
 @media screen and (max-width: 700px) {
