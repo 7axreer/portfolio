@@ -5,8 +5,8 @@
                 <div class="shape__blur"></div>
 
                 <div class="about__left">
+                    <img src="@/assets/img/Saidaxror.jpg" alt="" />
                     <div class="about__blur"></div>
-                    <img src="@/assets/img/me.png" alt="" />
                 </div>
 
                 <div class="about__right">

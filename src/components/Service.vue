@@ -67,7 +67,7 @@
 
 <style>
     .service {
-        margin: 50px 0 85px 0;
+        padding: 50px 0 85px 0;
     }
 
     .service__name {

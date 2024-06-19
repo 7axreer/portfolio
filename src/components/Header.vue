@@ -45,14 +45,13 @@
                 <div class="header__left">
                     <h1 class="header__title">
                         <span>{{ langData.im[lang ? "en" : "ru"] }}</span> <br />
-                        Full-Stack<br />
                         {{ langData.frontEnd[lang ? "en" : "ru"] }} <br />
                         {{ langData.developer[lang ? "en" : "ru"] }}.
                     </h1>
                     <button class="header__btn">{{ langData.download[lang ? "en" : "ru"] }}<i class="far fa-arrow-to-bottom"></i></button>
                 </div>
                 <div class="header__right">
-                    <img src="@/assets/img/me.png" alt="" />
+                    <img src="@/assets/img/Saidaxror.jpg" alt="" />
                 </div>
             </div>
         </div>

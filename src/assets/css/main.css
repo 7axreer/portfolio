@@ -40,8 +40,13 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: var(--openMedium);
+   
+}
+
+html {
     scroll-behavior: smooth;
-    scroll-padding: 70px;
+    scroll-padding: 80px;
+
 }
 
 body {
@@ -113,10 +118,12 @@ header {
     align-items: center;
     justify-content: center;
     gap: 10px;
+
 }
 
 .header__right > img {
     width: 400px;
+    border-radius: 20px;
 }
 
 /* ! ABOUT START */
@@ -143,6 +150,13 @@ header {
 .about__left {
     width: 350px;
     position: relative;
+}
+
+.about__left > img {
+    position: relative;
+    z-index: 99;
+    border-radius: 10px;
+
 }
 
 .about__right {
@@ -391,6 +405,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .overlay {
@@ -409,7 +424,7 @@ header {
 /* ! SKILLS START */
 
 .skills {
-    margin: 50px 0 85px 0;
+    padding: 50px 0 85px 0;
 }
 
 .skills__wrap {
