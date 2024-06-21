@@ -55,9 +55,7 @@
             };
         },
         mounted() {
-            setTimeout(() => {
-                this.portfolio = true;
-            }, 2500);
+            this.portfolio = true
         },
         methods: {
             toggleLanguage() {
