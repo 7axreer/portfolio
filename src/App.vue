@@ -55,7 +55,11 @@
             };
         },
         mounted() {
-            this.portfolio = true
+            this.$nextTick(() => {
+                window.addEventListener("load", () => {
+                    this.portfolio = true;
+                });
+            });
         },
         methods: {
             toggleLanguage() {
