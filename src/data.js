@@ -65,53 +65,47 @@ const skills = [
 
     {
         id: 11,
-        img: require("@/assets/img/robot.svg"),
-        des: { en: "Mobile App", ru: "Мобильное приложение" },
-        name: "robo.uz",
+        video: require("@/assets/video/eb.mp4"),
+        des: { en: "Website", ru: "Веб-сайт" },
+        name: "e-book",
+        URL: "https://7axreer.github.io/e-book/",
     },
     {
         id: 12,
-        img: require("@/assets/img/huawei.png"),
+        video: require("@/assets/video/ec.mp4"),
         des: { en: "Website", ru: "Веб-сайт" },
-        name: "heawei.com",
+        name: "e-commerce",
+        URL: "https://7axreer.github.io/e-commerse/",
+
     },
     {
         id: 13,
-        img: require("@/assets/img/dji.svg"),
+        video: require("@/assets/video/pizza.mp4"),
         des: { en: "Website", ru: "Веб-сайт" },
-        name: "dji.com",
+        name: "pizzashop",
+        URL: "https://pizzashop-axreer.vercel.app/",
     },
     {
         id: 14,
-        img: require("@/assets/img/mcdonalds.svg"),
+        video: require("@/assets/video/db.mp4"),
         des: { en: "Website", ru: "Веб-сайт" },
-        name: "mcdonalds.com",
+        name: "dBurger",
+        URL: "https://dburger-axreer.vercel.app/",
     },
     {
         id: 15,
-        img: require("@/assets/img/burger-king.svg"),
-        des: { en: "Mobile App", ru: "Мобильное приложение" },
-        name: "burgerking.com",
+        video: require("@/assets/video/ym.mp4"),
+        des: { en: "Website", ru: "Веб-сайт" },
+        name: "YourMeal",
+        URL: "https://yourmeal-axreer.vercel.app/",
     },
 
     {
         id: 16,
-        img: require("@/assets/img/toyota.svg"),
-        des: { en: "Mobile App", ru: "Мобильное приложение" },
-        name: "toyota.com",
-    },
-
-    {
-        id: 17,
-        img: require("@/assets/img/vodafone.svg"),
-        des: { en: "Mobile App", ru: "Мобильное приложение" },
-        name: "vodafone.com",
-    },
-    {
-        id: 18,
-        img: require("@/assets/img/disney.jpg"),
-        des: { en: "Mobile App", ru: "Мобильное приложение" },
-        name: "disney.com",
+        video: require("@/assets/video/car.mp4"),
+        des: { en: "Website", ru: "Веб-сайт" },
+        name: "fast-car",
+        URL: "https://car-axreer.vercel.app/",
     },
 ];
 export default skills;

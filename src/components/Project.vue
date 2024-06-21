@@ -21,18 +21,18 @@
                             slidesPerView: 2.5,
                         },
                     }">
-
                     <SwiperSlide class="project__card swiper-slide" v-for="project in projects" :key="project">
                         <div class="project__img">
-                            <img :src="project.img" alt="" />
+                            <video :src="project.video" alt="" type="video/mp4" loop muted autoplay playsinline />
                         </div>
                         <div class="project__info">
-                            <span class="project__des">{{ lang ? project.des.en : project.des.ru}}</span>
+                            <span class="project__des">{{ lang ? project.des.en : project.des.ru }}</span>
                             <p class="project__name">{{ project.name }}</p>
                         </div>
-                        <a href="" class="project__btn"> {{ langData.projectBtn[lang ? "en" : "ru"] }} <i class="far fa-external-link"></i> </a>
+                        <a :href="project.URL" class="project__btn" target="_blank">
+                            {{ langData.projectBtn[lang ? "en" : "ru"] }} <i class="far fa-external-link"></i>
+                        </a>
                     </SwiperSlide>
-                    
                 </Swiper>
             </div>
         </div>
@@ -70,10 +70,9 @@
         },
         computed: {
             projects() {
-                return this.skills.filter((skill) => [11, 12, 13, 14, 16, 17].includes(skill.id));
+                return this.skills.filter((skill) => [11, 12, 13, 14, 15, 16, 17].includes(skill.id));
             },
-
-        }
+        },
     };
 </script>
 

@@ -2,7 +2,10 @@
     <nav class="nav">
         <div class="container">
             <div class="nav__content">
-                <a href="#header" class="nav__logo">{{ langData.portfolio[lang ? "en" : "ru"] }}</a>
+                <a href="/" class="nav__logo">
+                    <!-- {{ langData.portfolio[lang ? "en" : "ru"] }} -->
+                    <img src="@/assets/img/logo.png" alt="">
+                </a>
 
                 <ul class="nav__list" :class="{ active: isActive }">
                     <li>
@@ -109,10 +112,29 @@ nav {
     justify-content: space-between;
 }
 
+@keyframes logoAnime {
+  0% {
+    transform: rotateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  0% {
+    transform: translateY(0px);
+  }
+}
+
 .nav__logo {
     font-size: 21px;
     font-family: var(--openSemiBold);
     color: var(--second-color);
+    animation: logoAnime 2s infinite linear;
+}
+
+.nav__logo > img {
+    width: 30px;
+    
+
 }
 
 .nav__list {
@@ -155,4 +177,8 @@ nav {
     font-size: 16px;
     background: none;
 }
+
+
+
+
 </style>

@@ -52,9 +52,9 @@
 
                 <div class="contact__details">
                     <ul class="contact__nums">
-                        <li>+998 99 122 88 41</li>
-                        <li>+998 94 006 88 41</li>
-                        <li>saidaxororpc7@gmail.com</li>
+                        <li><a href="tel:+998991228841"><i class="fal fa-phone-alt"></i> +998 99 122 88 41</a></li>
+                        <li><a href="tel:+998940068841"><i class="fal fa-phone-alt"></i> +998 94 006 88 41</a></li>
+                       <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=saidaxororpc7@gmail.com" target="_blank"><i class="fal fa-envelope"></i> saidaxororpc7@gmail.com</a></li>
                     </ul>
                     <ul class="contact__list">
                         <li>
@@ -70,7 +70,7 @@
                             <a href="#skills" class="contact__link"><i class="fas fa-code"></i></a>
                         </li>
                         <li>
-                            <a href="#contact" class="contact__link"><i class="fas fa-inbox-out"></i></a>
+                            <a href="#contact" class="contact__link"><i class="fas fa-phone-rotary"></i></a>
                         </li>
                     </ul>
                 </div>

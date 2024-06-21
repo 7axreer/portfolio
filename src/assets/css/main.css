@@ -314,10 +314,12 @@ header {
     display: grid;
     place-items: center;
     border-radius: 25px;
+    padding: 0 15px;
 }
 
-.project__img > img {
-    width: 150px;
+.project__img > video {
+    width: 100%;
+    border-radius: 7px;
 }
 
 .project__btn {
@@ -708,25 +710,46 @@ header {
 .contact__list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    padding: 10px 6px;
+    border-radius: 6px;
+    gap: 12px;
     margin-right: 30px;
+    background: var(--first-color);
 
 }
 
 .contact__link {
     color: var(--white-color);
     font-size: 18px;
+    transition: 0.3s;
 }
+
+.contact__link:hover {
+    color: #091621;
+
+}
+
 
 .contact__nums {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 20px
 
 }
 
-.contact__nums > li {
+.contact__nums > li > a {
     color: var(--white-color);
+    font-size: 20px;
+    background: var(--first-color);
+    padding: 2px 8px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.contact__nums > li > a:hover {
+    color: var(--second-color);
+    background: var(--white-color);
 }
 
 
