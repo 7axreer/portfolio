@@ -7,23 +7,23 @@
                     <p class="contact__sub" v-html="contactDes"></p>
 
                     <div class="contact__form">
-                        <form action="" @submit="onSubmit">
+                        <form action="" @submit.prevent="onSubmit">
                             <div class="input__box">
                                 <label for="input__name" class="contact__label">{{ langData.contactName[lang ? "en" : "ru"] }}</label>
-                                <input type="text" class="contact__input input__name" placeholder="Saidaxror" />
+                                <input v-model="formData.name" type="text" class="contact__input input__name" placeholder="Saidaxror" />
                             </div>
                             <div class="input__box">
                                 <label for="input__name" class="contact__label">{{ langData.contactNumber[lang ? "en" : "ru"] }}</label>
-                                <input type="text" class="contact__input input__num" placeholder="+998 99 122 88 41" />
+                                <input v-model="formData.number" type="text" class="contact__input input__num" placeholder="+998 99 122 88 41" />
                             </div>
                             <div class="input__box">
                                 <label for="input__name" class="contact__label">{{ langData.contactUsername[lang ? "en" : "ru"] }}</label>
                                 <div class="input__username">
                                     <i class="fab fa-telegram"></i>
-                                    <input type="text" class="contact__input input__user" placeholder="@username" />
+                                    <input v-model="formData.username" type="text" class="contact__input input__user" placeholder="@username" />
                                 </div>
                             </div>
-                            <button class="input__button">SEND</button>
+                            <button type="submit" class="input__button">SEND</button>
                         </form>
                     </div>
                 </div>
@@ -33,17 +33,17 @@
                     <form action="" @submit="onSubmit">
                         <div class="input__box">
                             <label for="input__name" class="contact__label">{{ langData.contactName[lang ? "en" : "ru"] }}</label>
-                            <input type="text" class="contact__input input__name" placeholder="Saidaxror" />
+                            <input v-model="formData.name" type="text" class="contact__input input__name" placeholder="Saidaxror" />
                         </div>
                         <div class="input__box">
                             <label for="input__name" class="contact__label">{{ langData.contactNumber[lang ? "en" : "ru"] }}</label>
-                            <input type="text" class="contact__input input__num" placeholder="+998 99 122 88 41" />
+                            <input v-model="formData.number" type="text" class="contact__input input__num" placeholder="+998 99 122 88 41" />
                         </div>
                         <div class="input__box">
                             <label for="input__name" class="contact__label">{{ langData.contactUsername[lang ? "en" : "ru"] }}</label>
                             <div class="input__username">
                                 <i class="fab fa-telegram"></i>
-                                <input type="text" class="contact__input input__user" placeholder="@username" />
+                                <input v-model="formData.username" type="text" class="contact__input input__user" placeholder="@username" />
                             </div>
                         </div>
                         <button class="input__button">SEND</button>
@@ -52,9 +52,17 @@
 
                 <div class="contact__details">
                     <ul class="contact__nums">
-                        <li><a href="tel:+998991228841"><i class="fal fa-phone-alt"></i> +998 99 122 88 41</a></li>
-                        <li><a href="tel:+998940068841"><i class="fal fa-phone-alt"></i> +998 94 006 88 41</a></li>
-                       <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=saidaxororpc7@gmail.com" target="_blank"><i class="fal fa-envelope"></i> saidaxororpc7@gmail.com</a></li>
+                        <li>
+                            <a href="tel:+998991228841"><i class="fal fa-phone-alt"></i> +998 99 122 88 41</a>
+                        </li>
+                        <li>
+                            <a href="tel:+998940068841"><i class="fal fa-phone-alt"></i> +998 94 006 88 41</a>
+                        </li>
+                        <li>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saidaxororpc7@gmail.com" target="_blank"
+                                ><i class="fal fa-envelope"></i> saidaxororpc7@gmail.com</a
+                            >
+                        </li>
                     </ul>
                     <ul class="contact__list">
                         <li>
@@ -91,11 +99,21 @@
         data() {
             return {
                 langData: langData,
+                formData: {
+                    name: "",
+                    number: "",
+                    username: "",
+                },
             };
         },
         methods: {
-            onSubmit(e) {
-                e.preventDefault();
+            onSubmit() {
+                // Handle form submission here
+
+                // Clear form fields after submission
+                this.formData.name = "";
+                this.formData.number = "";
+                this.formData.username = "";
             },
         },
         computed: {

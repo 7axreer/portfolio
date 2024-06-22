@@ -104,6 +104,7 @@
     }
 
     .social {
+        z-index: 1000;
         flex-direction: row;
         left: 0;
         width: 100%;

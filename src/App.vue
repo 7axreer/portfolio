@@ -12,8 +12,6 @@
 </template>
 
 <script>
-    // const scroll = new SmoothScroll();
-
     import Header from "@/components/Header.vue";
     import Social from "@/components/Social.vue";
     import About from "@/components/About.vue";
@@ -55,11 +53,9 @@
             };
         },
         mounted() {
-            this.$nextTick(() => {
-                window.addEventListener("load", () => {
-                    this.portfolio = true;
-                });
-            });
+            setTimeout(() => {
+                this.portfolio = true;
+            }, 2500);
         },
         methods: {
             toggleLanguage() {

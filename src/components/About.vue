@@ -57,7 +57,7 @@
                                 <p class="info__desc">
                                      {{ langData.collageDes[lang ? "en" : "ru"] }}
                                 </p>
-                                <span class="info__date date__pc">2023 - current</span>
+                                <span class="info__date date__pc">2021 to 2023</span>
                             </div>
                         </div>
                     </div>
