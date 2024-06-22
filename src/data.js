@@ -29,19 +29,19 @@ const skills = [
         id: 6,
         name: "VUE JS",
         img: require("@/assets/img/vue.png"),
-         des: { en: "Proficient", ru: "Опытный" },
+        des: { en: "Proficient", ru: "Опытный" },
     },
     {
         id: 5,
         name: "VUE X",
         img: require("@/assets/img/vuex.png"),
-         des: { en: "Proficient", ru: "Опытный" },
+        des: { en: "Proficient", ru: "Опытный" },
     },
     {
         id: 7,
         name: "GITHUB",
         img: require("@/assets/img/github.svg"),
-         des: { en: "Proficient", ru: "Опытный" },
+        des: { en: "Proficient", ru: "Опытный" },
     },
 
     {
@@ -76,7 +76,6 @@ const skills = [
         des: { en: "Website", ru: "Веб-сайт" },
         name: "e-commerce",
         URL: "https://7axreer.github.io/e-commerse/",
-
     },
     {
         id: 13,
@@ -106,6 +105,13 @@ const skills = [
         des: { en: "Website", ru: "Веб-сайт" },
         name: "fast-car",
         URL: "https://car-axreer.vercel.app/",
+    },
+    {
+        id: 17,
+        img: require("@/assets/video/weather.mp4"),
+        des: { en: "Web App", ru: "Веб-Прило" },
+        name: "weather web app",
+        URL: "https://weather-axreer.vercel.app/",
     },
 ];
 export default skills;
