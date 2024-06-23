@@ -87,7 +87,7 @@
     .nav__list {
         position: fixed;
         left: -100%;
-        top: 67.5px;
+        top: 73.5px;
         align-items: start;
         flex-direction: column;
         height: 100vh;
@@ -122,7 +122,7 @@
     }
 
     .overlay {
-        top: 68.5px;
+        top: 73.5px;
     }
 
     .header__content {
