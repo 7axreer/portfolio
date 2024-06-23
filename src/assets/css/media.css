@@ -251,6 +251,11 @@
         color: #ffffff;
         font-size: 12px;
     }
+
+    .contact__nums > li > a {
+        background: transparentnp;
+
+    }
     
 
 
