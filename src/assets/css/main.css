@@ -40,13 +40,11 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: var(--openMedium);
-   
 }
 
 html {
     scroll-behavior: smooth;
     scroll-padding: 80px;
-
 }
 
 body {
@@ -75,6 +73,30 @@ header {
     height: 100vh;
     display: grid;
     place-items: center;
+    position: relative;
+}
+
+.header__shadow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(96.77deg, #38b5fc 0%, #d53eee 100%);
+    right: 0;
+    top: 0;
+    border-radius: 100%;
+    filter: blur(150px);
+}
+
+.bottom__shadow {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(96.77deg, #38b5fc 0%, #d53eee 100%);
+    border-radius: 100%;
+    filter: blur(150px);
+    bottom: 0;
+    left: 0;
+
 }
 
 .header__content {
@@ -118,7 +140,8 @@ header {
     align-items: center;
     justify-content: center;
     gap: 10px;
-
+    position: static;
+    z-index: 3;
 }
 
 .header__right > img {
@@ -156,7 +179,6 @@ header {
     position: relative;
     z-index: 99;
     border-radius: 10px;
-
 }
 
 .about__right {
@@ -189,7 +211,6 @@ header {
     font-family: var(--syneRegular);
     font-size: 18px;
     text-decoration: underline;
-
 }
 
 /* ? INFO START */
@@ -229,8 +250,6 @@ header {
     gap: 60px;
 }
 
-
-
 .info__date {
     color: rgb(117, 119, 128);
     font-family: var(--syneRegular);
@@ -244,7 +263,6 @@ header {
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    
 }
 
 .info__texts {
@@ -473,7 +491,7 @@ header {
     background: #fdbd2e;
 }
 
-.skills__green {    
+.skills__green {
     background: #25c93f;
 }
 
@@ -576,11 +594,10 @@ header {
     font-size: 48px;
 }
 
-.contact__text >span {
+.contact__text > span {
     color: var(--first-color);
     font-family: var(--syneBold);
     font-size: 48px;
-
 }
 
 .contact__sub {
@@ -594,7 +611,6 @@ header {
     font-family: var(--syneSemiBold);
     color: var(--first-color);
     font-size: 18px;
-
 }
 
 .contact__box {
@@ -628,7 +644,6 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-
 }
 
 .contact__label {
@@ -663,13 +678,11 @@ header {
 .input__user {
     padding-left: 40px;
     width: 100%;
-
 }
 
 .input__username {
     position: relative;
     width: 100%;
-
 }
 
 .input__username > i {
@@ -679,19 +692,15 @@ header {
     top: 24%;
     left: 15px;
     transform: translate(-50% -50%);
-
 }
 
 .contact__media {
     display: none;
-
 }
 
 .contact__details {
     display: flex;
     justify-content: space-between;
-    
-
 }
 
 .line {
@@ -699,12 +708,10 @@ header {
     height: 1px;
     background: var(--fifth-text-color);
     margin-top: 190px;
-
 }
 
-.contact__details{
+.contact__details {
     margin-top: 50px;
-
 }
 
 .contact__list {
@@ -716,7 +723,6 @@ header {
     gap: 12px;
     margin-right: 30px;
     background: var(--first-color);
-
 }
 
 .contact__link {
@@ -727,15 +733,12 @@ header {
 
 .contact__link:hover {
     color: #091621;
-
 }
-
 
 .contact__nums {
     display: flex;
     flex-direction: column;
-    gap: 20px
-
+    gap: 20px;
 }
 
 .contact__nums > li > a {
@@ -752,6 +755,34 @@ header {
     background: var(--white-color);
 }
 
-
-
 /* ! CONTACT END */
+
+.scrollUp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    transform: translateY(100px);
+    transition: transform 0.3s ease-in-out;
+    z-index: 99;
+}
+
+.scrollUp__visible {
+    transform: translateY(0);
+}
+
+.scrollUp__button {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    border-radius: 8px;
+    background: rgba(63, 156, 251, 0.34);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+}
+
+.scrollUp__button i {
+    color: #ffffff;
+    font-size: 18px;
+}

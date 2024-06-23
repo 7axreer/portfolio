@@ -236,6 +236,23 @@
 
     }
 
+    .scrollUp {
+        right: 15px;
+        bottom: 75px;
+    }
+
+    .scrollUp__button {
+        width: 30px;
+        height: 30px;
+        border-radius: 6px;
+    }
+
+    .scrollUp__button i {
+        color: #ffffff;
+        font-size: 12px;
+    }
+    
+
 
 }
 

@@ -1,11 +1,10 @@
 <template>
-
     <nav class="nav">
         <div class="container">
             <div class="nav__content">
                 <a href="/" class="nav__logo">
                     <!-- {{ langData.portfolio[lang ? "en" : "ru"] }} -->
-                    <img src="@/assets/img/logo.png" alt="" />
+                    <img src="@/assets/img/icon.svg" alt="" />
                 </a>
 
                 <ul class="nav__list" :class="{ active: isActive }">
@@ -44,6 +43,7 @@
     </nav>
 
     <header class="header" id="header">
+        <div class="header__shadow"></div>
         <div class="container wrap">
             <div class="header__content">
                 <div class="header__left">
@@ -52,15 +52,18 @@
                         {{ langData.frontEnd[lang ? "en" : "ru"] }} <br />
                         {{ langData.developer[lang ? "en" : "ru"] }}.
                     </h1>
-                    <button class="header__btn">{{ langData.download[lang ? "en" : "ru"] }}<i class="far fa-arrow-to-bottom"></i></button>
+                    <a href="/cv.pdf" download="Sobirov Saidaxror - CV" class="header__btn">
+                        {{ langData.download[lang ? "en" : "ru"] }}
+                        <i class="far fa-arrow-to-bottom"></i>
+                    </a>
                 </div>
                 <div class="header__right">
                     <img src="@/assets/img/Saidaxror.jpg" alt="" />
                 </div>
             </div>
         </div>
+        <div class="bottom__shadow"></div>
     </header>
-
 </template>
 
 <script>
@@ -113,13 +116,13 @@
 
     @keyframes logoAnime {
         0% {
-            transform: rotateY(0px);
+            transform: translateY(0);
         }
         50% {
-            transform: translateY(8px);
+            transform: translateY(5px);
         }
         0% {
-            transform: translateY(0px);
+            transform: translateY(0);
         }
     }
 
@@ -131,7 +134,7 @@
     }
 
     .nav__logo > img {
-        width: 30px;
+        width: 35px;
     }
 
     .nav__list {

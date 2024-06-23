@@ -108,9 +108,9 @@ const skills = [
     },
     {
         id: 17,
-        img: require("@/assets/video/weather.mp4"),
+        video: require("@/assets/video/weather.mp4"),
         des: { en: "Web App", ru: "Веб-Прило" },
-        name: "weather web app",
+        name: "Weather Web App",
         URL: "https://weather-axreer.vercel.app/",
     },
 ];

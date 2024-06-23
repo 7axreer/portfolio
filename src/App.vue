@@ -7,6 +7,7 @@
         <Service :lang="lang" />
         <Skills :lang="lang" />
         <Contact :lang="lang" />
+        <ScrollUp />
     </div>
     <div v-else><Loader /></div>
 </template>
@@ -19,6 +20,7 @@
     import Service from "@/components/Service.vue";
     import Skills from "@/components/Skills.vue";
     import Contact from "@/components/Contact.vue";
+    import ScrollUp from "@/components/Scroll.vue";
     import Loader from "@/components/Loader.vue";
 
     // import Lenis from "lenis";
@@ -44,6 +46,7 @@
             Service,
             Skills,
             Contact,
+            ScrollUp,
             Loader,
         },
         data() {
