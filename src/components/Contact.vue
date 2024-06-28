@@ -10,18 +10,15 @@
                         <form action="" @submit.prevent="onSubmit">
                             <div class="input__box">
                                 <label for="input__name" class="contact__label">{{ langData.contactName[lang ? "en" : "ru"] }}</label>
-                                <input v-model="formData.name" type="text" class="contact__input input__name" placeholder="Saidaxror" />
+                                <input v-model="formData.name" type="text" class="contact__input input__name" placeholder="Saidaxror" required />
                             </div>
                             <div class="input__box">
                                 <label for="input__name" class="contact__label">{{ langData.contactNumber[lang ? "en" : "ru"] }}</label>
-                                <input v-model="formData.number" type="text" class="contact__input input__num" placeholder="+998 99 122 88 41" />
+                                <input v-model="formData.number" type="text" class="contact__input input__num" placeholder="+998 99 122 88 41" required />
                             </div>
                             <div class="input__box">
                                 <label for="input__name" class="contact__label">{{ langData.contactUsername[lang ? "en" : "ru"] }}</label>
-                                <div class="input__username">
-                                    <i class="fab fa-telegram"></i>
-                                    <input v-model="formData.username" type="text" class="contact__input input__user" placeholder="@username" />
-                                </div>
+                                <textarea v-model="formData.message" type="text" class="contact__input input__num" placeholder="Your Message" required />
                             </div>
                             <button type="submit" class="input__button">SEND</button>
                         </form>
@@ -30,21 +27,18 @@
                 <div class="line"></div>
 
                 <div class="contact__form contact__media">
-                    <form action="" @submit="onSubmit">
+                    <form action="" @submit.prevent="onSubmit">
                         <div class="input__box">
                             <label for="input__name" class="contact__label">{{ langData.contactName[lang ? "en" : "ru"] }}</label>
-                            <input v-model="formData.name" type="text" class="contact__input input__name" placeholder="Saidaxror" />
+                            <input v-model="formData.name" type="text" class="contact__input input__name" placeholder="Saidaxror" required />
                         </div>
                         <div class="input__box">
                             <label for="input__name" class="contact__label">{{ langData.contactNumber[lang ? "en" : "ru"] }}</label>
-                            <input v-model="formData.number" type="text" class="contact__input input__num" placeholder="+998 99 122 88 41" />
+                            <input v-model="formData.number" type="text" class="contact__input input__num" placeholder="+998 99 122 88 41" required />
                         </div>
                         <div class="input__box">
                             <label for="input__name" class="contact__label">{{ langData.contactUsername[lang ? "en" : "ru"] }}</label>
-                            <div class="input__username">
-                                <i class="fab fa-telegram"></i>
-                                <input v-model="formData.username" type="text" class="contact__input input__user" placeholder="@username" />
-                            </div>
+                            <textarea v-model="formData.message" type="text" class="contact__input input__num" placeholder="Your Message" required />
                         </div>
                         <button class="input__button">SEND</button>
                     </form>
@@ -88,43 +82,70 @@
 </template>
 
 <script>
-    import langData from "@/lang.js";
-    export default {
-        props: {
-            lang: {
-                type: Boolean,
-                required: true,
+import langData from "@/lang.js";
+export default {
+    props: {
+        lang: {
+            type: Boolean,
+            required: true,
+        },
+    },
+    data() {
+        return {
+            langData: langData,
+            formData: {
+                name: "",
+                number: "",
+                message: "",
             },
-        },
-        data() {
-            return {
-                langData: langData,
-                formData: {
-                    name: "",
-                    number: "",
-                    username: "",
-                },
-            };
-        },
-        methods: {
-            onSubmit() {
-                // Handle form submission here
+        };
+    },
+    methods: {
+        async onSubmit() {
+            const botToken = "7417284057:AAHeefZBU-g74o5Qtb6XgzDtRTx_RH-T23M";
+            const chatId = "6458498045";
+            const telegramMessage = [
+                "Сиз учун янги хабар ⤵️",
+                `👤 Name: ${this.formData.name}`,
+                `☎️ Number: ${this.formData.number}`,
+                `💬 Message: ${this.formData.message}`,
+            ].join("\n");
 
-                // Clear form fields after submission
-                this.formData.name = "";
-                this.formData.number = "";
-                this.formData.username = "";
-            },
+            try {
+                const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: telegramMessage,
+                    }),
+                });
+
+                if (response.ok) {
+                    alert("Message sent successfully!");
+                    this.formData.name = "";
+                    this.formData.number = "";
+                    this.formData.message = "";
+                } else {
+                    alert("Error sending message.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Error sending message.");
+            }
         },
-        computed: {
-            contactMe() {
-                return this.lang ? this.langData.contactMe.en : this.langData.contactMe.ru;
-            },
-            contactDes() {
-                return this.lang ? this.langData.contactDes.en : this.langData.contactDes.ru;
-            },
+    },
+    computed: {
+        contactMe() {
+            return this.lang ? this.langData.contactMe.en : this.langData.contactMe.ru;
         },
-    };
+        contactDes() {
+            return this.lang ? this.langData.contactDes.en : this.langData.contactDes.ru;
+        },
+    },
+};
 </script>
 
 <style></style>

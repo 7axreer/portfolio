@@ -626,7 +626,7 @@ header {
     right: 50px;
     width: 430px;
     height: 480px;
-    padding: 35px;
+    padding: 20px 25px;
     border-radius: 1.5rem;
     background: rgba(23, 34, 43, 0.69);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -660,6 +660,23 @@ header {
     color: var(--white-color);
     font-size: 18px;
     margin: 0 0 20px;
+}
+
+textarea {
+    padding: 5px;
+    background: none;
+    font-size: 16px;
+    resize: none;
+    height: 115px;
+}
+
+textarea::-webkit-scrollbar {
+    background: #263039;
+    width: 5px;
+}
+textarea::-webkit-scrollbar-thumb {
+    background: #444444;
+    width: 5px;
 }
 
 .contact__input::placeholder {

@@ -204,8 +204,8 @@ const langData = {
         ru: `Номер телефона`
     },
     contactUsername: {
-        en: `Telegram username`,
-        ru: `Имя пользователя Telegram`
+        en: `Your messages`,
+        ru: `Ваши сообщения`
     },
 
 };
