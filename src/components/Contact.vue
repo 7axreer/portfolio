@@ -14,11 +14,23 @@
                             </div>
                             <div class="input__box">
                                 <label for="input__name" class="contact__label">{{ langData.contactNumber[lang ? "en" : "ru"] }}</label>
-                                <input v-model="formData.number" type="text" class="contact__input input__num" placeholder="+998 99 122 88 41" required />
+                                <input
+                                    v-model="formData.number"
+                                    type="text"
+                                    class="contact__input input__num"
+                                    placeholder="+998 99 122 88 41"
+                                    required
+                                />
                             </div>
                             <div class="input__box">
                                 <label for="input__name" class="contact__label">{{ langData.contactUsername[lang ? "en" : "ru"] }}</label>
-                                <textarea v-model="formData.message" type="text" class="contact__input input__num" placeholder="Your Message" required />
+                                <textarea
+                                    v-model="formData.message"
+                                    type="text"
+                                    class="contact__input input__num"
+                                    placeholder="Your Message"
+                                    required
+                                />
                             </div>
                             <button type="submit" class="input__button">SEND</button>
                         </form>
@@ -104,10 +116,18 @@ export default {
         async onSubmit() {
             const botToken = "7417284057:AAHeefZBU-g74o5Qtb6XgzDtRTx_RH-T23M";
             const chatId = "6458498045";
+
+              let phoneNumber = this.formData.number.trim();
+            if (!phoneNumber.startsWith("+998")) {
+                phoneNumber = "+998" + phoneNumber;
+            } else {
+                this.number
+            }
+
             const telegramMessage = [
                 "Сиз учун янги хабар ⤵️",
                 `👤 Name: ${this.formData.name}`,
-                `☎️ Number: ${this.formData.number}`,
+                `☎️ Number: ${phoneNumber}`,
                 `💬 Message: ${this.formData.message}`,
             ].join("\n");
 
@@ -135,6 +155,9 @@ export default {
                 console.error("Error:", error);
                 alert("Error sending message.");
             }
+
+            // Check if the phone number starts with "+998"
+          
         },
     },
     computed: {
