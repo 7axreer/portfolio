@@ -142,11 +142,17 @@ header {
     gap: 10px;
     position: static;
     z-index: 3;
+    transition: 0.2s linear;
 }
 
 .header__right > img {
     width: 400px;
     border-radius: 20px;
+}
+
+.header__btn:hover {
+    background: var(--second-color);
+
 }
 
 /* ! ABOUT START */
@@ -675,8 +681,10 @@ textarea::-webkit-scrollbar {
     width: 5px;
 }
 textarea::-webkit-scrollbar-thumb {
-    background: #444444;
+    background: #707070;
     width: 5px;
+    height: 20px;
+    cursor: pointer;
 }
 
 .contact__input::placeholder {
@@ -690,6 +698,13 @@ textarea::-webkit-scrollbar-thumb {
     font-size: 18px;
     padding: 12px;
     border-radius: 8px;
+    transition: 0.1s linear;
+}
+
+.input__button:hover {
+    background: var(--white-color);
+    color: var(--second-color);
+
 }
 
 .input__user {

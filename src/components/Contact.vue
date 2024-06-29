@@ -15,12 +15,13 @@
                             <div class="input__box">
                                 <label for="input__name" class="contact__label">{{ langData.contactNumber[lang ? "en" : "ru"] }}</label>
                                 <input
+                                    @input="liveValidate"
                                     v-model="formData.number"
                                     type="text"
                                     class="contact__input input__num"
-                                    placeholder="+998 99 122 88 41"
-                                    required
-                                />
+                                    :placeholder="placeholder"
+                                    required />
+                                <p class="error" v-if="error">{{ error }}</p>
                             </div>
                             <div class="input__box">
                                 <label for="input__name" class="contact__label">{{ langData.contactUsername[lang ? "en" : "ru"] }}</label>
@@ -29,8 +30,7 @@
                                     type="text"
                                     class="contact__input input__num"
                                     placeholder="Your Message"
-                                    required
-                                />
+                                    required />
                             </div>
                             <button type="submit" class="input__button">SEND</button>
                         </form>
@@ -94,81 +94,106 @@
 </template>
 
 <script>
-import langData from "@/lang.js";
-export default {
-    props: {
-        lang: {
-            type: Boolean,
-            required: true,
-        },
-    },
-    data() {
-        return {
-            langData: langData,
-            formData: {
-                name: "",
-                number: "",
-                message: "",
+    import langData from "@/lang.js";
+    export default {
+        props: {
+            lang: {
+                type: Boolean,
+                required: true,
             },
-        };
-    },
-    methods: {
-        async onSubmit() {
-            const botToken = "7417284057:AAHeefZBU-g74o5Qtb6XgzDtRTx_RH-T23M";
-            const chatId = "6458498045";
+        },
+        data() {
+            return {
+                langData: langData,
+                formData: {
+                    name: "",
+                    number: "",
+                    message: "",
+                },
+                placeholder: "+998 99 122 88 41",
+            };
+        },
+        methods: {
+            async onSubmit() {
+                const botToken = "7417284057:AAHeefZBU-g74o5Qtb6XgzDtRTx_RH-T23M";
+                const chatId = "6458498045";
 
-              let phoneNumber = this.formData.number.trim();
-            if (!phoneNumber.startsWith("+998")) {
-                phoneNumber = "+998" + phoneNumber;
-            } else {
-                this.number
-            }
-
-            const telegramMessage = [
-                "Сиз учун янги хабар ⤵️",
-                `👤 Name: ${this.formData.name}`,
-                `☎️ Number: ${phoneNumber}`,
-                `💬 Message: ${this.formData.message}`,
-            ].join("\n");
-
-            try {
-                const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text: telegramMessage,
-                    }),
-                });
-
-                if (response.ok) {
-                    alert("Message sent successfully!");
-                    this.formData.name = "";
-                    this.formData.number = "";
-                    this.formData.message = "";
+                let phoneNumber = this.formData.number.trim();
+                if (!phoneNumber.startsWith("+998")) {
+                    phoneNumber = "+998" + phoneNumber;
                 } else {
+                    this.number;
+                }
+
+                const telegramMessage = [
+                    "Сиз учун янги хабар ⤵️",
+                    ``,
+                    `👤 Name: ${this.formData.name}`,
+                    `☎️ Number: ${phoneNumber}`,
+                    `💬 Message: ${this.formData.message}`,
+                ].join("\n");
+
+                try {
+                    const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: telegramMessage,
+                        }),
+                    });
+
+                    if (response.ok) {
+                        alert("Message sent successfully!");
+                        this.formData.name = "";
+                        this.formData.number = "";
+                        this.formData.message = "";
+                    } else {
+                        alert("Error sending message.");
+                    }
+                } catch (error) {
+                    console.error("Error:", error);
                     alert("Error sending message.");
                 }
-            } catch (error) {
-                console.error("Error:", error);
-                alert("Error sending message.");
-            }
 
-            // Check if the phone number starts with "+998"
-          
+                // Check if the phone number starts with "+998"
+            },
+            liveValidate() {
+                // Raqamlar va bo'shliqlardan tashqari barcha belgilarni olib tashlash
+                this.formData.number = this.formData.number.replace(/[^\d\s+]/g, "");
+
+                // Validatsiya qilish
+                const regex = /^\+?(\d{3}\s\d{2}\s\d{3}\s\d{2}\s\d{2})$/;
+                if (!regex.test(this.formData.number)) {
+                    this.formData.number = this.formData.number.slice(0, 16);
+                    991228841;
+                }
+                if (!regex.test(this.formData.number)) {
+                    this.placeholder = "Please enter a number only";
+                    setTimeout(() => {
+                        this.placeholder = "+998 99 122 88 41";
+                    }, 2000);
+                } else {
+                    this.placeholder = "";
+                }
+            },
         },
-    },
-    computed: {
-        contactMe() {
-            return this.lang ? this.langData.contactMe.en : this.langData.contactMe.ru;
+        computed: {
+            contactMe() {
+                return this.lang ? this.langData.contactMe.en : this.langData.contactMe.ru;
+            },
+            contactDes() {
+                return this.lang ? this.langData.contactDes.en : this.langData.contactDes.ru;
+            },
         },
-        contactDes() {
-            return this.lang ? this.langData.contactDes.en : this.langData.contactDes.ru;
-        },
-    },
-};
+    };
 </script>
 
-<style></style>
+<style scoped>
+    .error {
+        font-size: 14px;
+        color: #ffffff;
+    }
+</style>
